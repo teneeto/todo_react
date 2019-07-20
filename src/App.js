@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Todos from './components/Todo';
+import Todos from './components/Todos';
 import './App.css';
 
 class App extends Component {
@@ -13,14 +13,13 @@ class App extends Component {
     {
       id: 2,
       title: 'Dinner with wife',
-      completed: false,
+      completed: true,
     },
     {
       id: 3,
       title: 'Meeting the with boss',
       completed: false,
-    }
-    ]
+    }]
   }
   render() {
 
