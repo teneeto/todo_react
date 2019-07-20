@@ -5,6 +5,7 @@ class TodoItem extends Component {
 
   getStyle = () => {
     return {
+      display: 'flex',
       background: '#f4f4f4',
       padding: '10px',
       borderBottom: '1px #cc dotted',
@@ -13,13 +14,19 @@ class TodoItem extends Component {
     }
   }
 
+  markComplete(e) {
+
+  }
+
 
 
   render() {
+    const { id, title } = this.props.todo
     return (
       <div style={this.getStyle()}>
-        <input type="chekbox" />
-        <p>{this.props.todo.title}</p>
+        <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />
+        {' '}
+        <p>{title}</p>
       </div >
     )
   }
